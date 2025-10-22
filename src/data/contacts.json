@@ -1,0 +1,191 @@
+[
+  {
+    "id": 1,
+    "name": "Rajesh Kumar",
+    "email": "rajesh.kumar@gmail.com",
+    "phone": "+91 98765 43210",
+    "isFavorite": true
+  },
+  {
+    "id": 2,
+    "name": "Priya Sharma",
+    "email": "priya.sharma@yahoo.com",
+    "phone": "+91 87654 32109",
+    "isFavorite": false
+  },
+  {
+    "id": 3,
+    "name": "Amit Patel",
+    "email": "amit.patel@outlook.com",
+    "phone": "+91 76543 21098",
+    "isFavorite": true
+  },
+  {
+    "id": 4,
+    "name": "Sneha Reddy",
+    "email": "sneha.reddy@gmail.com",
+    "phone": "+91 65432 10987",
+    "isFavorite": false
+  },
+  {
+    "id": 5,
+    "name": "Vikram Singh",
+    "email": "vikram.singh@hotmail.com",
+    "phone": "+91 54321 09876",
+    "isFavorite": false
+  },
+  {
+    "id": 6,
+    "name": "Anjali Gupta",
+    "email": "anjali.gupta@gmail.com",
+    "phone": "+91 43210 98765",
+    "isFavorite": true
+  },
+  {
+    "id": 7,
+    "name": "Arjun Mehta",
+    "email": "arjun.mehta@yahoo.com",
+    "phone": "+91 32109 87654",
+    "isFavorite": false
+  },
+  {
+    "id": 8,
+    "name": "Kavya Nair",
+    "email": "kavya.nair@gmail.com",
+    "phone": "+91 21098 76543",
+    "isFavorite": false
+  },
+  {
+    "id": 9,
+    "name": "Sanjay Verma",
+    "email": "sanjay.verma@outlook.com",
+    "phone": "+91 10987 65432",
+    "isFavorite": false
+  },
+  {
+    "id": 10,
+    "name": "Divya Iyer",
+    "email": "divya.iyer@gmail.com",
+    "phone": "+91 90876 54321",
+    "isFavorite": true
+  },
+  {
+    "id": 11,
+    "name": "Rahul Chopra",
+    "email": "rahul.chopra@gmail.com",
+    "phone": "+91 99887 76655",
+    "isFavorite": false
+  },
+  {
+    "id": 12,
+    "name": "Neha Kapoor",
+    "email": "neha.kapoor@yahoo.com",
+    "phone": "+91 88776 65544",
+    "isFavorite": true
+  },
+  {
+    "id": 13,
+    "name": "Karthik Subramanian",
+    "email": "karthik.s@gmail.com",
+    "phone": "+91 77665 54433",
+    "isFavorite": false
+  },
+  {
+    "id": 14,
+    "name": "Pooja Desai",
+    "email": "pooja.desai@hotmail.com",
+    "phone": "+91 66554 43322",
+    "isFavorite": false
+  },
+  {
+    "id": 15,
+    "name": "Aditya Rao",
+    "email": "aditya.rao@outlook.com",
+    "phone": "+91 55443 32211",
+    "isFavorite": true
+  },
+  {
+    "id": 16,
+    "name": "Ritu Bhatt",
+    "email": "ritu.bhatt@gmail.com",
+    "phone": "+91 44332 21100",
+    "isFavorite": false
+  },
+  {
+    "id": 17,
+    "name": "Manish Joshi",
+    "email": "manish.joshi@yahoo.com",
+    "phone": "+91 33221 10099",
+    "isFavorite": false
+  },
+  {
+    "id": 18,
+    "name": "Deepika Pillai",
+    "email": "deepika.pillai@gmail.com",
+    "phone": "+91 22110 09988",
+    "isFavorite": true
+  },
+  {
+    "id": 19,
+    "name": "Rohan Malhotra",
+    "email": "rohan.malhotra@outlook.com",
+    "phone": "+91 11009 98877",
+    "isFavorite": false
+  },
+  {
+    "id": 20,
+    "name": "Ishita Banerjee",
+    "email": "ishita.banerjee@gmail.com",
+    "phone": "+91 90099 87766",
+    "isFavorite": false
+  },
+  {
+    "id": 21,
+    "name": "Varun Saxena",
+    "email": "varun.saxena@hotmail.com",
+    "phone": "+91 89988 76655",
+    "isFavorite": true
+  },
+  {
+    "id": 22,
+    "name": "Meera Krishnan",
+    "email": "meera.krishnan@gmail.com",
+    "phone": "+91 78877 65544",
+    "isFavorite": false
+  },
+  {
+    "id": 23,
+    "name": "Siddharth Agarwal",
+    "email": "siddharth.agarwal@yahoo.com",
+    "phone": "+91 67766 54433",
+    "isFavorite": false
+  },
+  {
+    "id": 24,
+    "name": "Ananya Das",
+    "email": "ananya.das@gmail.com",
+    "phone": "+91 56655 43322",
+    "isFavorite": true
+  },
+  {
+    "id": 25,
+    "name": "Nikhil Tiwari",
+    "email": "nikhil.tiwari@outlook.com",
+    "phone": "+91 45544 32211",
+    "isFavorite": false
+  },
+  {
+    "id": 26,
+    "name": "Tanvi Mishra",
+    "email": "tanvi.mishra@gmail.com",
+    "phone": "+91 34433 21100",
+    "isFavorite": false
+  },
+  {
+    "id": 27,
+    "name": "Abhinav Sinha",
+    "email": "abhinav.sinha@hotmail.com",
+    "phone": "+91 23322 10099",
+    "isFavorite": true
+  }
+]
