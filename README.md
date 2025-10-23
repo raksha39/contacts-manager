@@ -12,7 +12,7 @@ A modern contacts management application built with React, Vite, and Tailwind CS
 
 ## Live Demo
 
-The application is deployed and accessible at: [Add your deployment link here]
+The application is deployed and accessible at: https://smart-contactmanager.netlify.app/
 
 ## Notable Features
 
