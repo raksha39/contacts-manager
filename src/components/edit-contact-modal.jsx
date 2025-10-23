@@ -79,24 +79,24 @@ const EditContactModal = ({ isOpen, onClose, onEditContact, contact }) => {
   if (!isOpen || !contact) return null
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm animate-fade-in">
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md mx-4 transform transition-all duration-300 scale-100">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm animate-fade-in p-4">
+      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-y-auto transform transition-all duration-300 scale-100">
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-5 border-b border-gray-200 bg-linear-to-r from-indigo-50 to-purple-50 rounded-t-2xl">
+        <div className="flex items-center justify-between px-4 sm:px-6 py-4 sm:py-5 border-b border-gray-200 bg-linear-to-r from-indigo-50 to-purple-50 rounded-t-2xl sticky top-0 z-10">
           <div>
-            <h2 className="text-2xl font-bold text-gray-900">Edit Contact</h2>
-            <p className="text-sm text-gray-600 mt-1">Update contact information</p>
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Edit Contact</h2>
+            <p className="text-xs sm:text-sm text-gray-600 mt-1">Update contact information</p>
           </div>
           <button
             onClick={handleClose}
             className="text-gray-400 hover:text-gray-600 transition-all duration-300 hover:rotate-90 p-2 rounded-full hover:bg-gray-100"
           >
-            <X className="w-6 h-6" />
+            <X className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="px-6 py-4">
+        <form onSubmit={handleSubmit} className="px-4 sm:px-6 py-4">
           <div className="space-y-4">
             {/* Name Field */}
             <div>
@@ -109,13 +109,13 @@ const EditContactModal = ({ isOpen, onClose, onEditContact, contact }) => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                  errors.name ? 'border-red-500' : 'border-gray-300'
+                className={`w-full px-3 py-2.5 border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all text-sm sm:text-base ${
+                  errors.name ? 'border-red-500 bg-red-50' : 'border-gray-200 focus:border-indigo-500'
                 }`}
                 placeholder="Enter full name"
               />
               {errors.name && (
-                <p className="mt-1 text-sm text-red-500">{errors.name}</p>
+                <p className="mt-1 text-xs sm:text-sm text-red-500">{errors.name}</p>
               )}
             </div>
 
@@ -130,13 +130,13 @@ const EditContactModal = ({ isOpen, onClose, onEditContact, contact }) => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                  errors.email ? 'border-red-500' : 'border-gray-300'
+                className={`w-full px-3 py-2.5 border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all text-sm sm:text-base ${
+                  errors.email ? 'border-red-500 bg-red-50' : 'border-gray-200 focus:border-indigo-500'
                 }`}
                 placeholder="example@gmail.com"
               />
               {errors.email && (
-                <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+                <p className="mt-1 text-xs sm:text-sm text-red-500">{errors.email}</p>
               )}
             </div>
 
@@ -151,44 +151,44 @@ const EditContactModal = ({ isOpen, onClose, onEditContact, contact }) => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                  errors.phone ? 'border-red-500' : 'border-gray-300'
+                className={`w-full px-3 py-2.5 border-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all text-sm sm:text-base ${
+                  errors.phone ? 'border-red-500 bg-red-50' : 'border-gray-200 focus:border-indigo-500'
                 }`}
                 placeholder="+91 XXXXX XXXXX"
               />
               {errors.phone && (
-                <p className="mt-1 text-sm text-red-500">{errors.phone}</p>
+                <p className="mt-1 text-xs sm:text-sm text-red-500">{errors.phone}</p>
               )}
             </div>
 
             {/* Favorite Checkbox */}
-            <div className="flex items-center">
+            <div className="flex items-center gap-3 p-3 sm:p-4 bg-gray-50 rounded-xl border-2 border-gray-200 hover:border-indigo-300 transition-all">
               <input
                 type="checkbox"
                 id="isFavorite"
                 name="isFavorite"
                 checked={formData.isFavorite}
                 onChange={handleChange}
-                className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500 cursor-pointer"
               />
-              <label htmlFor="isFavorite" className="ml-2 text-sm text-gray-700">
-                Add to favorites
+              <label htmlFor="isFavorite" className="text-xs sm:text-sm font-medium text-gray-700 cursor-pointer">
+                ⭐ Add to favorites
               </label>
             </div>
           </div>
 
           {/* Footer Buttons */}
-          <div className="flex justify-end gap-3 mt-6 pt-4 border-t border-gray-200">
+          <div className="flex flex-col sm:flex-row justify-end gap-2 sm:gap-3 mt-6 pt-4 border-t border-gray-200">
             <button
               type="button"
               onClick={handleClose}
-              className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+              className="w-full sm:w-auto px-4 sm:px-6 py-2.5 sm:py-3 text-sm font-semibold text-gray-700 bg-gray-100 border-2 border-gray-200 rounded-xl hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all duration-300 transform hover:scale-105"
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+              className="w-full sm:w-auto px-4 sm:px-6 py-2.5 sm:py-3 text-sm font-semibold text-white bg-linear-to-r from-indigo-600 to-purple-600 border-2 border-transparent rounded-xl hover:from-indigo-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Save Changes
             </button>

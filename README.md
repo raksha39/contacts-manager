@@ -56,7 +56,7 @@ To build for production, run `npm run build`. The optimized files will be in the
 
 ## Libraries Used
 
-**React (18.3)** - I chose React for its component-based architecture and efficient rendering. It makes managing state and building interactive UIs straightforward.
+**React (18.3)** - I chose React for its component based architecture and efficient rendering. It makes managing state and building interactive UIs straightforward.
 
 **Vite (6.0)** - Selected as the build tool because it's incredibly fast during development with hot module replacement and has a much simpler configuration compared to webpack.
 
@@ -66,9 +66,7 @@ To build for production, run `npm run build`. The optimized files will be in the
 
 ## Design Choices and Assumptions
 
-**localStorage for Data**: I used browser localStorage instead of a database since this is a client-side application. This means data is stored locally on your device and won't sync across different browsers or devices. For a production app, you'd want to add a backend API.
-
-**50 Demo Contacts**: The app comes pre-loaded with sample contacts using Indian names and phone numbers in +91 format. This gives users something to interact with immediately when they first open the app.
+**localStorage for Data**: I used browser localStorage instead of a database since this is a client side application. This means data is stored locally on your device and won't sync across different browsers or devices. For a production app, you'd want to add a backend API.
 
 **Gradient Avatars**: Instead of requiring profile pictures, the app generates colorful gradient avatars with initials. This keeps the design consistent and eliminates the need for image uploads.
 

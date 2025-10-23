@@ -66,8 +66,8 @@ const ContactList = ({ contacts = [], onEdit, onDelete, onToggleFavorite, darkMo
         ? 'bg-gray-900 border-gray-800' 
         : 'bg-white border-gray-100'
     }`}>
-      {/* Header - Sticky */}
-      <div className={`sticky top-0 z-10 grid grid-cols-12 gap-4 px-6 py-4 border-b text-xs font-bold uppercase tracking-wider transition-colors duration-300 ${
+      {/* Header - Sticky - Hidden on mobile */}
+      <div className={`hidden md:grid sticky top-0 z-10 grid-cols-12 gap-4 px-6 py-4 border-b text-xs font-bold uppercase tracking-wider transition-colors duration-300 ${
         darkMode 
           ? 'bg-linear-to-r from-gray-800 to-black border-gray-700 text-gray-300' 
           : 'bg-linear-to-r from-indigo-50 to-purple-50 border-indigo-100 text-indigo-900'
@@ -85,7 +85,7 @@ const ContactList = ({ contacts = [], onEdit, onDelete, onToggleFavorite, darkMo
         {contacts.map((contact, index) => (
           <div
             key={contact.id}
-            className={`grid grid-cols-12 gap-4 px-6 py-4 transition-all duration-300 items-center group animate-fade-in ${
+            className={`grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-4 px-4 md:px-6 py-4 md:py-4 transition-all duration-300 items-start md:items-center group animate-fade-in ${
               darkMode 
                 ? 'hover:bg-gray-800/70' 
                 : 'hover:bg-linear-to-r hover:from-indigo-50 hover:to-purple-50'
@@ -95,13 +95,13 @@ const ContactList = ({ contacts = [], onEdit, onDelete, onToggleFavorite, darkMo
               onMouseLeave={() => setHoveredId(null)}
             >
               {/* Name with Avatar */}
-              <div className="col-span-4 flex items-center gap-3">
-                <div className={`w-12 h-12 rounded-full bg-linear-to-br ${getAvatarColor(contact.name)} flex items-center justify-center text-white font-bold text-sm shrink-0 shadow-md group-hover:scale-110 transition-transform duration-300`}>
+              <div className="col-span-1 md:col-span-4 flex items-center gap-3">
+                <div className={`w-12 h-12 md:w-12 md:h-12 rounded-full bg-linear-to-br ${getAvatarColor(contact.name)} flex items-center justify-center text-white font-bold text-sm shrink-0 shadow-md group-hover:scale-110 transition-transform duration-300`}>
                   {getInitials(contact.name)}
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2">
-                    <p className={`text-sm font-semibold truncate transition-colors ${
+                    <p className={`text-sm md:text-sm font-semibold truncate transition-colors ${
                       darkMode 
                         ? 'text-white group-hover:text-indigo-400' 
                         : 'text-gray-900 group-hover:text-indigo-600'
@@ -113,10 +113,46 @@ const ContactList = ({ contacts = [], onEdit, onDelete, onToggleFavorite, darkMo
                     )}
                   </div>
                 </div>
+                {/* Mobile Actions */}
+                <div className="md:hidden flex gap-1">
+                  <button
+                    onClick={() => onEdit?.(contact)}
+                    className={`p-2 rounded-lg transition-all duration-300 ${
+                      darkMode 
+                        ? 'text-gray-400 hover:text-indigo-400 hover:bg-gray-800' 
+                        : 'text-gray-400 hover:text-indigo-600 hover:bg-indigo-50'
+                    }`}
+                    title="Edit contact"
+                  >
+                    <Edit className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={() => onToggleFavorite?.(contact.id)}
+                    className={`p-2 rounded-lg transition-all duration-300 ${
+                      darkMode 
+                        ? 'text-gray-400 hover:text-yellow-400 hover:bg-gray-800' 
+                        : 'text-gray-400 hover:text-yellow-600 hover:bg-yellow-50'
+                    }`}
+                    title={contact.isFavorite ? "Remove from favorites" : "Add to favorites"}
+                  >
+                    <Star className={`w-4 h-4 ${contact.isFavorite ? 'fill-yellow-500 text-yellow-500' : ''}`} />
+                  </button>
+                  <button
+                    onClick={() => onDelete?.(contact.id)}
+                    className={`p-2 rounded-lg transition-all duration-300 ${
+                      darkMode 
+                        ? 'text-gray-400 hover:text-red-400 hover:bg-gray-800' 
+                        : 'text-gray-400 hover:text-red-600 hover:bg-red-50'
+                    }`}
+                    title="Delete contact"
+                  >
+                    <Trash2 className="w-4 h-4" />
+                  </button>
+                </div>
               </div>
 
               {/* Email */}
-              <div className="col-span-3">
+              <div className="col-span-1 md:col-span-3 pl-15 md:pl-0">
                 <div className={`flex items-center gap-2 text-sm group/email ${
                   darkMode ? 'text-gray-300' : 'text-gray-600'
                 }`}>
@@ -135,7 +171,7 @@ const ContactList = ({ contacts = [], onEdit, onDelete, onToggleFavorite, darkMo
               </div>
 
               {/* Phone */}
-              <div className="col-span-3">
+              <div className="col-span-1 md:col-span-3 pl-15 md:pl-0">
                 <div className={`flex items-center gap-2 text-sm group/phone ${
                   darkMode ? 'text-gray-300' : 'text-gray-600'
                 }`}>
@@ -153,8 +189,8 @@ const ContactList = ({ contacts = [], onEdit, onDelete, onToggleFavorite, darkMo
                 </div>
               </div>
 
-              {/* Actions */}
-              <div className="col-span-2 flex items-center justify-end gap-1">
+              {/* Desktop Actions */}
+              <div className="hidden md:flex col-span-2 items-center justify-end gap-1">
                 {hoveredId === contact.id && (
                   <div className="flex gap-1 animate-slide-in">
                     <button
