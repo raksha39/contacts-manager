@@ -48,8 +48,7 @@ const Header = ({ onAddContact, onSearch, darkMode, onToggleDarkMode }) => {
               className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 border-2 border-white text-sm font-semibold rounded-xl text-white bg-white/20 backdrop-blur-sm hover:bg-white hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
             >
               <Plus className="w-4 h-4 sm:w-5 sm:h-5" />
-              <span className="hidden sm:inline">Add Contact</span>
-              <span className="sm:hidden">Add</span>
+              <span>Add Contact</span>
             </button>
           </div>
         </div>
