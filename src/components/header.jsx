@@ -50,7 +50,6 @@ const Header = ({ onAddContact, onSearch, darkMode, onToggleDarkMode }) => {
               <Plus className="w-4 h-4 sm:w-5 sm:h-5" />
               <span className="hidden sm:inline">Add Contact</span>
               <span className="sm:hidden">Add</span>
-              Add Contact
             </button>
           </div>
         </div>
